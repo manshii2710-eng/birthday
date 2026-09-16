@@ -1,0 +1,2062 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#ffd8e8">
+<title>For Nainwal Ji 🌸</title>
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+:root{
+  --pink:#ffd6e6;
+  --pink2:#ffb9d2;
+  --hotpink:#e77fa6;
+  --lavender:#eee7ff;
+  --mint:#e6f7ed;
+  --cream:#fff8fc;
+  --white:#ffffff;
+  --text:#513e48;
+  --soft:#8c6877;
+}
+
+html,body{
+  width:100%;
+  height:100%;
+  overflow:hidden;
+}
+
+body{
+  font-family:"Trebuchet MS",Arial,sans-serif;
+  background:
+    radial-gradient(circle at 10% 10%, #ffe1ed 0 8%, transparent 20%),
+    radial-gradient(circle at 90% 90%, #eee6ff 0 8%, transparent 22%),
+    linear-gradient(135deg,#fff7fb,#fff0f6,#f7f3ff);
+  color:var(--text);
+}
+
+/* =========================
+   SLIDESHOW
+========================= */
+
+#app{
+  width:100%;
+  height:100%;
+  position:relative;
+}
+
+.slide{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  padding:
+    max(55px,env(safe-area-inset-top))
+    max(18px,env(safe-area-inset-right))
+    max(70px,env(safe-area-inset-bottom))
+    max(18px,env(safe-area-inset-left));
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  opacity:0;
+  visibility:hidden;
+  transform:scale(.985);
+  transition:
+    opacity .55s ease,
+    transform .55s ease;
+
+  overflow-y:auto;
+  overflow-x:hidden;
+}
+
+.slide.active{
+  opacity:1;
+  visibility:visible;
+  transform:scale(1);
+}
+
+.slide-inner{
+  width:min(1050px,100%);
+  max-height:100%;
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  z-index:5;
+}
+
+/* cute border on every slide */
+.slide::before{
+  content:"";
+  position:absolute;
+  inset:11px;
+  border:2px dashed rgba(231,127,166,.28);
+  border-radius:28px;
+  pointer-events:none;
+}
+
+.slide::after{
+  content:"";
+  position:absolute;
+  inset:18px;
+  border:1px solid rgba(255,185,210,.22);
+  border-radius:24px;
+  pointer-events:none;
+}
+
+/* =========================
+   HELLO-KITTY-INSPIRED
+   DECORATIONS
+========================= */
+
+.decorations{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:20;
+  overflow:hidden;
+}
+
+.doodle{
+  position:absolute;
+  user-select:none;
+  filter:drop-shadow(0 3px 5px rgba(150,90,120,.12));
+}
+
+.cat{
+  width:65px;
+  height:65px;
+  border-radius:50%;
+  background:#fff;
+  border:3px solid #f1bfd1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:34px;
+  box-shadow:0 5px 15px rgba(220,130,165,.12);
+}
+
+.cat .bow{
+  position:absolute;
+  font-size:20px;
+  top:-13px;
+  right:-7px;
+  transform:rotate(12deg);
+}
+
+.cat-left{
+  left:14px;
+  top:17%;
+  transform:rotate(-8deg);
+}
+
+.cat-right{
+  right:14px;
+  bottom:18%;
+  transform:rotate(8deg);
+}
+
+.bow-top{
+  top:17px;
+  left:50%;
+  transform:translateX(-50%) rotate(-4deg);
+  font-size:25px;
+}
+
+.flower-left{
+  left:22px;
+  bottom:9%;
+  font-size:24px;
+  transform:rotate(-15deg);
+}
+
+.flower-right{
+  right:22px;
+  top:10%;
+  font-size:23px;
+  transform:rotate(12deg);
+}
+
+.star1{
+  left:9%;
+  top:42%;
+  font-size:15px;
+}
+
+.star2{
+  right:9%;
+  top:54%;
+  font-size:18px;
+}
+
+.star3{
+  left:15%;
+  top:73%;
+  font-size:12px;
+}
+
+.star4{
+  right:16%;
+  top:25%;
+  font-size:13px;
+}
+
+.paw-left{
+  left:5%;
+  top:59%;
+  font-size:18px;
+  opacity:.65;
+  transform:rotate(-18deg);
+}
+
+.paw-right{
+  right:5%;
+  top:38%;
+  font-size:18px;
+  opacity:.65;
+  transform:rotate(18deg);
+}
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+
+.kicker{
+  display:inline-block;
+  background:#fff;
+  border:1px solid #f3c0d3;
+  color:var(--hotpink);
+  padding:7px 14px;
+  border-radius:30px;
+  font-size:12px;
+  letter-spacing:1.5px;
+  margin-bottom:15px;
+  box-shadow:0 5px 15px rgba(220,130,165,.10);
+}
+
+h1{
+  font-size:clamp(34px,7vw,72px);
+  line-height:1.05;
+  color:#d96992;
+  margin-bottom:16px;
+}
+
+h2{
+  font-size:clamp(27px,5vw,48px);
+  line-height:1.15;
+  color:#d96992;
+  margin-bottom:18px;
+}
+
+p{
+  font-family:Georgia,serif;
+  font-size:clamp(16px,2.2vw,21px);
+  line-height:1.7;
+  max-width:760px;
+}
+
+.small{
+  font-size:14px;
+  color:var(--soft);
+  margin-top:12px;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.note{
+  background:rgba(255,255,255,.88);
+  border:1px solid #f1cada;
+  border-radius:25px;
+  padding:25px 28px;
+  max-width:760px;
+  box-shadow:0 15px 40px rgba(205,125,155,.12);
+  position:relative;
+}
+
+.note::before{
+  content:"🎀";
+  position:absolute;
+  top:-16px;
+  right:22px;
+  font-size:25px;
+}
+
+.note.mint{
+  background:#f4fff8;
+}
+
+.note.lavender{
+  background:#faf8ff;
+}
+
+.note.pink{
+  background:#fff5f9;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+button,
+.spotify{
+  border:none;
+  text-decoration:none;
+  cursor:pointer;
+  font-family:inherit;
+}
+
+.next-btn{
+  position:fixed;
+  z-index:50;
+  bottom:max(18px,env(safe-area-inset-bottom));
+  left:50%;
+  transform:translateX(-50%);
+
+  background:#fff;
+  color:#d56891;
+  border:2px solid #f1b7ce;
+  border-radius:999px;
+  padding:12px 23px;
+  font-size:15px;
+  font-weight:bold;
+
+  box-shadow:0 8px 22px rgba(190,105,140,.15);
+  transition:.25s ease;
+}
+
+.next-btn:hover{
+  transform:translateX(-50%) translateY(-2px);
+  background:#fff5f9;
+}
+
+.spotify{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  margin-top:20px;
+  background:#e889ab;
+  color:white;
+  padding:12px 21px;
+  border-radius:999px;
+  font-weight:bold;
+  box-shadow:0 8px 20px rgba(220,105,145,.20);
+}
+
+.spotify:hover{
+  background:#d96f96;
+}
+
+.music-mini{
+  position:fixed;
+  right:18px;
+  bottom:max(18px,env(safe-area-inset-bottom));
+  z-index:51;
+
+  width:43px;
+  height:43px;
+  border-radius:50%;
+  border:1px solid #f1bfd2;
+  background:#fff;
+  color:#d96f96;
+  box-shadow:0 6px 18px rgba(190,105,140,.15);
+}
+
+/* =========================
+   GIFT
+========================= */
+
+.gift-wrap{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  cursor:pointer;
+}
+
+.gift{
+  width:150px;
+  height:125px;
+  position:relative;
+  margin:25px auto 28px;
+  animation:floatGift 2.3s ease-in-out infinite;
+}
+
+.gift-box{
+  position:absolute;
+  left:10px;
+  bottom:0;
+  width:130px;
+  height:92px;
+  background:linear-gradient(135deg,#ffbfd7,#f58fb3);
+  border-radius:10px;
+  box-shadow:0 15px 30px rgba(210,105,145,.22);
+}
+
+.gift-box::before{
+  content:"";
+  position:absolute;
+  left:52px;
+  top:0;
+  width:25px;
+  height:100%;
+  background:#fff2f7;
+}
+
+.gift-box::after{
+  content:"";
+  position:absolute;
+  left:0;
+  top:35px;
+  width:100%;
+  height:20px;
+  background:#ffeaf2;
+}
+
+.gift-lid{
+  position:absolute;
+  left:3px;
+  top:20px;
+  width:144px;
+  height:32px;
+  background:#ff9fbe;
+  border-radius:8px;
+  z-index:3;
+  transition:.7s ease;
+}
+
+.gift-bow{
+  position:absolute;
+  z-index:5;
+  top:-7px;
+  left:50%;
+  transform:translateX(-50%);
+  font-size:42px;
+}
+
+.gift.open .gift-lid{
+  transform:translateY(-65px) rotate(-8deg);
+}
+
+@keyframes floatGift{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-9px)}
+}
+
+/* =========================
+   POLAROID PHOTOS
+========================= */
+
+.photo-row{
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:28px;
+  margin:20px 0;
+  flex-wrap:wrap;
+}
+
+.polaroid{
+  background:white;
+  padding:10px 10px 22px;
+  width:min(290px,42vw);
+  box-shadow:0 12px 30px rgba(120,70,95,.16);
+  position:relative;
+}
+
+.polaroid:nth-child(1){
+  transform:rotate(-3deg);
+}
+
+.polaroid:nth-child(2){
+  transform:rotate(3deg);
+}
+
+.polaroid:nth-child(3){
+  transform:rotate(-2deg);
+}
+
+.polaroid img{
+  width:100%;
+  aspect-ratio:4/3;
+  object-fit:cover;
+  display:block;
+  background:#ffeef5;
+}
+
+/* image loading */
+.photo-box{
+  position:relative;
+  background:#ffeef5;
+  overflow:hidden;
+}
+
+.loader{
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#fff4f8;
+  z-index:2;
+  color:#d8799c;
+  font-size:13px;
+}
+
+.loader::before{
+  content:"🌸";
+  display:block;
+  animation:spin 1s linear infinite;
+  margin-right:7px;
+}
+
+.photo-box.loaded .loader{
+  display:none;
+}
+
+@keyframes spin{
+  from{transform:rotate(0)}
+  to{transform:rotate(360deg)}
+}
+
+/* =========================
+   TWO COLUMN SONG
+========================= */
+
+.song-layout{
+  width:100%;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:25px;
+  align-items:center;
+}
+
+.song-card,
+.lyric-card{
+  background:rgba(255,255,255,.9);
+  border:1px solid #f0cada;
+  border-radius:25px;
+  padding:25px;
+  box-shadow:0 14px 35px rgba(190,110,140,.11);
+}
+
+.lyric{
+  font-family:Georgia,serif;
+  font-size:clamp(19px,3vw,28px);
+  line-height:1.5;
+  color:#bd5e82;
+  font-style:italic;
+}
+
+.meaning{
+  margin-top:15px;
+  font-size:15px;
+  line-height:1.6;
+  color:#765a67;
+}
+
+/* =========================
+   CAT SPECIAL
+========================= */
+
+.cat-big{
+  font-size:80px;
+  margin:10px 0 15px;
+  position:relative;
+}
+
+.cat-big::after{
+  content:"🎀";
+  position:absolute;
+  font-size:38px;
+  top:-8px;
+  right:calc(50% - 70px);
+}
+
+/* =========================
+   PROGRESS
+========================= */
+
+.progress{
+  position:fixed;
+  top:max(13px,env(safe-area-inset-top));
+  left:50%;
+  transform:translateX(-50%);
+  z-index:55;
+
+  display:flex;
+  gap:5px;
+}
+
+.progress span{
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:#f2c5d6;
+  transition:.3s;
+}
+
+.progress span.active{
+  width:20px;
+  border-radius:10px;
+  background:#e889ab;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:700px){
+
+  .slide{
+    padding:
+      55px
+      16px
+      78px
+      16px;
+  }
+
+  .slide::before{
+    inset:8px;
+    border-radius:22px;
+  }
+
+  .slide::after{
+    inset:14px;
+    border-radius:19px;
+  }
+
+  .slide-inner{
+    padding:5px 3px;
+  }
+
+  h1{
+    font-size:38px;
+  }
+
+  h2{
+    font-size:28px;
+  }
+
+  p{
+    font-size:16px;
+    line-height:1.6;
+  }
+
+  .note{
+    padding:21px 18px;
+  }
+
+  .photo-row{
+    gap:12px;
+  }
+
+  .polaroid{
+    width:43vw;
+    min-width:145px;
+    padding:7px 7px 15px;
+  }
+
+  .song-layout{
+    grid-template-columns:1fr;
+    gap:12px;
+  }
+
+  .song-card,
+  .lyric-card{
+    padding:18px;
+  }
+
+  .cat{
+    width:47px;
+    height:47px;
+    font-size:25px;
+    border-width:2px;
+  }
+
+  .cat .bow{
+    font-size:15px;
+    top:-10px;
+    right:-5px;
+  }
+
+  .cat-left{
+    left:4px;
+    top:13%;
+  }
+
+  .cat-right{
+    right:4px;
+    bottom:15%;
+  }
+
+  .flower-left{
+    left:9px;
+    bottom:9%;
+    font-size:18px;
+  }
+
+  .flower-right{
+    right:8px;
+    top:9%;
+    font-size:18px;
+  }
+
+  .paw-left{
+    left:4px;
+    top:54%;
+    font-size:14px;
+  }
+
+  .paw-right{
+    right:4px;
+    top:42%;
+    font-size:14px;
+  }
+
+  .star1,
+  .star2,
+  .star3,
+  .star4{
+    font-size:11px;
+  }
+
+  .gift{
+    transform:scale(.85);
+  }
+
+  .gift.open{
+    animation:none;
+  }
+}
+
+/* very small phones */
+@media(max-height:650px){
+  .slide{
+    align-items:flex-start;
+  }
+
+  .slide-inner{
+    padding-top:12px;
+  }
+
+  h2{
+    margin-bottom:10px;
+  }
+
+  .photo-row{
+    margin:10px 0;
+  }
+
+  .polaroid{
+    width:38vw;
+  }
+
+  p{
+    font-size:14px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div id="app">
+
+  <!-- CUTE DECORATIONS ON EVERY SLIDE -->
+  <div class="decorations">
+
+    <div class="doodle cat cat-left">
+      🐱
+      <span class="bow">🎀</span>
+    </div>
+
+    <div class="doodle cat cat-right">
+      🐱
+      <span class="bow">🎀</span>
+    </div>
+
+    <div class="doodle bow-top">🎀</div>
+
+    <div class="doodle flower-left">🌸</div>
+    <div class="doodle flower-right">🌷</div>
+
+    <div class="doodle star1">✦</div>
+    <div class="doodle star2">☆</div>
+    <div class="doodle star3">✧</div>
+    <div class="doodle star4">⋆</div>
+
+    <div class="doodle paw-left">🐾</div>
+    <div class="doodle paw-right">🐾</div>
+
+  </div>
+
+  <!-- =========================
+       SLIDE 1 — GIFT
+  ========================== -->
+
+  <section class="slide active">
+    <div class="slide-inner">
+
+      <div class="kicker">A tiny birthday surprise</div>
+
+      <h1>For Nainwal Ji 🌸</h1>
+
+      <div class="gift-wrap" onclick="openGift()">
+
+        <div class="gift" id="gift">
+
+          <div class="gift-bow">🎀</div>
+
+          <div class="gift-lid"></div>
+
+          <div class="gift-box"></div>
+
+        </div>
+
+        <div class="note pink">
+          <p>
+            Open me.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================
+       SLIDE 2 — DIAL TONE
+  ========================== -->
+
+  <section class="slide">
+    <div class="slide-inner">
+
+      <div class="kicker">For you 🎀</div>
+
+      <h2>This is Dial Tone (Redial).</h2>
+
+      <div class="note">
+
+        <p>
+          I'm listening to this song for you.
+        </p>
+
+        <a
+          class="spotify"
+          href="https://open.spotify.com/track/00wnbmBTNtBgWcc51LNsEh"
+          target="_blank"
+          rel="noopener"
+        >
+          ♫ Listen to it
+        </a>
+
+        <p class="small">
+          Listen to it while you read the rest. 🌸
+        </p>
+
+      </div>
+
+      <div class="lyric-card" style="margin-top:18px;max-width:650px">
+
+        <div class="lyric">
+          “Cause all that I hear is a dial tone.”
+        </div>
+
+        <div class="meaning">
+          Maybe that's why this song feels a little too familiar.
+          Some songs somehow become connected to a person.
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================
+       SLIDE 3
+  ========================== -->
+
+  <section class="slide">
+    <div class="slide-inner">
+
+      <div class="kicker">Your actual birthday gift</div>
+
+      <div class="note pink">
+
+        <h2 style="font-size:28px">
+          Hi, Nainwal Ji. 🌷
+        </h2>
+
+        <p>
+          It's your birthday.
+          And I wanted to give you something.
+          Actually, if we were meeting IRL,
+          I would've given you so many gifts.
+          But I don't know your address,
+          so I couldn't send you anything.
+          So… I made this for you instead. 🎀
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================
+       SLIDE 4
+  ========================== -->
+
+  <section class="slide">
+    <div class="slide-inner">
+
+      <div class="cat-big">🐱</div>
+
+      <div class="note lavender">
+
+        <p>
+          I don't know if a website counts as a birthday gift…
+        </p>
+
+        <p style="margin-top:12px">
+          But I made it anyway.
+          So please accept this tiny little thing from me. 🤍
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================
+       SLIDE 5
+  ========================== -->
+
+  <section class="slide">
+    <div class="slide-inner">
+
+      <div class="kicker">A few little things</div>
+
+      <h2>Things I remember about you.</h2>
+
+      <div class="note">
+
+        <p>
+          You were kind.
+          You were respectful.
+          You cared without making a big deal about it.
+        </p>
+
+        <p style="margin-top:15px">
+          And somehow…
+          you always managed to say sorry first.
+        </p>
+
+        <p style="margin-top:15px">
+          Very much queen treatment. 🎀
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================
+       SLIDE 6 — CALLS
+  ========================== -->
+
+  <section class="slide">
+    <div class="slide-inner">
+
+      <div class="photo-row">
+
+        <div class="polaroid">
+          <div class="photo-box">
+            <div class="loader">Loading</div>
+            <img
+              src="assets/1000196253.jpg"
+              onload="loaded(this)"
+              alt="A future road trip moment"
+            >
+          </div>
+        </div>
+
+        <div class="polaroid">
+          <div class="photo-box">
+            <div class="loader">Loading</div>
+            <img
+              src="assets/1000196244.jpg"
+              onload="loaded(this)"
+              alt="A cozy moment"
+            >
+          </div>
+        </div>
+
+      </div>
+
+      <div class="note">
+
+        <h2 style="font-size:28px">
+          Late-night calls.
+        </h2>
+
+        <p>
+          Talking for hours.
+          Random बातें.
+          Stupid बातें.
+          Serious बातें.
+          Then random बातें again.
+        </p>
+
+        <p style="margin-top:14px">
+          Sometimes we'd just fall asleep while talking.
+        </p>
+
+        <p style="margin-top:14px">
+          I don't know how to explain it,
+          but those nights felt like peace.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================
+       SLIDE 7
+  ========================== -->
+
+  <section class="slide">
+    <div class="slide-inner">
+
+      <div class="note mint">
+
+        <div class="cat-big">🐱</div>
+
+        <h2 style="font-size:28px">
+          What I miss.
+        </h2>
+
+        <p>
+          Not some grand thing.
+        </p>
+
+        <p style="margin-top:12px">
+          Just having someone I could talk to
+          at the end of the day.
+        </p>
+
+        <p style="margin-top:12px">
+          You.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================
+       SLIDE 8
+  ========================== -->
+
+  <section class="slide">
+    <div class="slide-inner">
+
+      <div class="kicker">Just being honest</div>
+
+      <div class="note pink">
+
+        <h2 style="font-size:32px">
+          I miss you.
+        </h2>
+
+        <p>
+          That's it.
+        </p>
+
+        <p style="margin-top:12px">
+          No guilt.
+          No expectations.
+          No pressure.
+        </p>
+
+        <p style="margin-top:12px">
+          Just… I miss you sometimes.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================
+       SLIDE 9
+  ========================== -->
+
+  <section class="slide">
+    <div class="slide-inner">
+
+      <div class="cat-big">🐱</div>
+
+      <h2>Okay.</h2>
+
+      <div class="note lavender">
+
+        <p>
+          Enough of the serious stuff.
+        </p>
+
+        <p style="margin-top:14px">
+          Let's go somewhere.
+        </p>
+
+        <p style="margin-top:14px">
+          Somewhere with mountains. 🏔️
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================
+       SLIDE 10 — MOUNTAINS
+  ========================== -->
+
+  <section class="slide">
+    <div class="slide-inner">
+
+      <h2>Imagine this.</h2>
+
+      <div class="photo-row">
+
+        <div class="polaroid">
+          <div class="photo-box">
+            <div class="loader">Loading</div>
+            <img
+              src="assets/1000196252.jpg"
+              onload="loaded(this)"
+              alt="Mountain daydream"
+            >
+          </div>
+        </div>
+
+        <div class="polaroid">
+          <div class="photo-box">
+            <div class="loader">Loading</div>
+            <img
+              src="assets/1000196243.jpg"
+              onload="loaded(this)"
+              alt="Walking in the mountains"
+            >
+          </div>
+        </div>
+
+      </div>
+
+      <div class="note">
+
+        <p>
+          Just you and me, somewhere in the mountains.
+        </p>
+
+        <p style="margin-top:12px">
+          No deadlines.
+          No rush.
+          No plans.
+        </p>
+
+        <p style="margin-top:12px">
+          Just sitting here and looking at this view.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================
+       SLIDE 11 — WALK
+  ========================== -->
+
+  <section class="slide">
+    <div class="slide-inner">
+
+      <div class="photo-row">
+
+        <div class="polaroid">
+          <div class="photo-box">
+            <div class="loader">Loading</div>
+            <img
+              src="assets/1000196249.jpg"
+              onload="loaded(this)"
+              alt="A mountain road"
+            >
+          </div>
+        </div>
+
+        <div class="polaroid">
+          <div class="photo-box">
+            <div class="loader">Loading</div>
+            <img
+              src="assets/1000196251.jpg"
+              onload="loaded(this)"
+              alt="A peaceful outdoor moment"
+            >
+          </div>
+        </div>
+
+      </div>
+
+      <div class="note mint">
+
+        <p>
+          We'd probably go for a walk
+          without knowing where we're going.
+        </p>
+
+        <p style="margin-top:12px">
+          And obviously… get lost.
+        </p>
+
+        <p style="margin-top:12px">
+          Because neither of us really knows
+          how to travel properly anyway. 🌸
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================
+       SLIDE 12 — CHAI
+  ========================== -->
+
+  <section class="slide">
+    <div class="slide-inner">
+
+      <div class="photo-row">
+
+        <div class="polaroid">
+          <div class="photo-box">
+            <div class="loader">Loading</div>
+            <img
+              src="assets/1000196250.jpg"
+              onload="loaded(this)"
+              alt="Two cups of chai"
+            >
+          </div>
+        </div>
+
+      </div>
+
+      <div class="note pink">
+
+        <h2 style="font-size:28px">
+          Two pahadi people…
+        </h2>
+
+        <p>
+          and obviously, chai.
+        </p>
+
+        <p style="margin-top:12px">
+          No fancy plans.
+          No itinerary.
+        </p>
+
+        <p style="margin-top:12px">
+          Just thandi hawa,
+          pahadon ka view…
+          aur do cups of chai. ☕🌸
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================
+       SLIDE 13 — ROAD TRIP
+  ========================== -->
+
+  <section class="slide">
+    <div class="slide-inner">
+
+      <div class="photo-row">
+
+        <div class="polaroid">
+          <div class="photo-box">
+            <div class="loader">Loading</div>
+            <img
+              src="assets/1000196253.jpg"
+              onload="loaded(this)"
+              alt="Road trip"
+            >
+          </div>
+        </div>
+
+        <div class="polaroid">
+          <div class="photo-box">
+            <div class="loader">Loading</div>
+            <img
+              src="assets/1000196248.jpg"
+              onload="loaded(this)"
+              alt="Mountain moment"
+            >
+          </div>
+        </div>
+
+      </div>
+
+      <div class="note lavender">
+
+        <p>
+          We'd take a random road,
+          play music,
+          keep the windows open,
+          stop whenever something looked pretty…
+        </p>
+
+        <p style="margin-top:12px">
+          and take pictures of everything.
+        </p>
+
+        <p style="margin-top:12px">
+          No destination required.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================
+       SLIDE 14 — CAFE
+  ========================== -->
+
+  <section class="slide">
+    <div class="slide-inner">
+
+      <div class="photo-row">
+
+        <div class="polaroid">
+          <div class="photo-box">
+            <div class="loader">Loading</div>
+            <img
+              src="assets/1000196247.jpg"
+              onload="loaded(this)"
+              alt="Little cafe"
+            >
+          </div>
+        </div>
+
+        <div class="polaroid">
+          <div class="photo-box">
+            <div class="loader">Loading</div>
+            <img
+              src="assets/1000196245.jpg"
+              onload="loaded(this)"
+              alt="Cafe table"
+            >
+          </div>
+        </div>
+
+      </div>
+
+      <div class="note">
+
+        <p>
+          Then we'd find a little café.
+        </p>
+
+        <p style="margin-top:12px">
+          Two drinks.
+          Something unnecessary to eat.
+        </p>
+
+        <p style="margin-top:12px">
+          And probably hours of talking.
+        </p>
+
+        <p style="margin-top:12px">
+          About everything.
+          And absolutely nothing.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================
+       SLIDE 15
+  ========================== -->
+
+  <section class="slide">
+    <div class="slide-inner">
+
+      <div class="photo-row">
+
+        <div class="polaroid">
+          <div class="photo-box">
+            <div class="loader">Loading</div>
+            <img
+              src="assets/1000196244.jpg"
+              onload="loaded(this)"
+              alt="Sitting together"
+            >
+          </div>
+        </div>
+
+        <div class="polaroid">
+          <div class="photo-box">
+            <div class="loader">Loading</div>
+            <img
+              src="assets/1000196252.jpg"
+              onload="loaded(this)"
+              alt="Quiet mountain moment"
+            >
+          </div>
+        </div>
+
+      </div>
+
+      <div class="note mint">
+
+        <p>
+          After all that…
+          I think I'd just want to sit beside you.
+        </p>
+
+        <p style="margin-top:12px">
+          No big conversation.
+          No big plans.
+        </p>
+
+        <p style="margin-top:12px">
+          Just you being there.
+        </p>
+
+        <p style="margin-top:12px">
+          I'd probably be happy with that.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================
+       SLIDE 16 — PHOTOS
+  ========================== -->
+
+  <section class="slide">
+    <div class="slide-inner">
+
+      <h2>I'd take way too many pictures. 📸</h2>
+
+      <div class="photo-row">
+
+        <div class="polaroid">
+          <div class="photo-box">
+            <div class="loader">Loading</div>
+            <img
+              src="assets/1000196248.jpg"
+              onload="loaded(this)"
+              alt="Photo moment"
+            >
+          </div>
+        </div>
+
+        <div class="polaroid">
+          <div class="photo-box">
+            <div class="loader">Loading</div>
+            <img
+              src="assets/1000196246.jpg"
+              onload="loaded(this)"
+              alt="Cute photo moment"
+            >
+          </div>
+        </div>
+
+      </div>
+
+      <div class="note pink">
+
+        <p>
+          You'd probably say,
+          “बस करो.”
+        </p>
+
+        <p style="margin-top:12px">
+          I'd take one more anyway. 🌸
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================
+       SLIDE 17 — CAT
+  ========================== -->
+
+  <section class="slide">
+    <div class="slide-inner">
+
+      <div class="cat-big">🐱</div>
+
+      <div class="note lavender">
+
+        <h2 style="font-size:30px">
+          One very important thing…
+        </h2>
+
+        <p>
+          We need a cat.
+        </p>
+
+        <p style="margin-top:14px">
+          We'd argue about it.
+          I'd suggest a name.
+          You'd suggest another.
+        </p>
+
+        <p style="margin-top:14px">
+          We'd probably never agree.
+        </p>
+
+        <p style="margin-top:14px">
+          But we'd still get the cat.
+        </p>
+
+        <p style="margin-top:14px">
+          Tiny little chaos. 🐾
+        </p>
+
+      </div>
+
+      <div class="photo-row">
+
+        <div class="polaroid">
+          <div class="photo-box">
+            <div class="loader">Loading</div>
+            <img
+              src="assets/1000196248.jpg"
+              onload="loaded(this)"
+              alt="Cat moment"
+            >
+          </div>
+        </div>
+
+        <div class="polaroid">
+          <div class="photo-box">
+            <div class="loader">Loading</div>
+            <img
+              src="assets/1000196254.jpg"
+              onload="loaded(this)"
+              alt="Sleeping cat"
+            >
+          </div>
+        </div>
+
+        <div class="polaroid">
+          <div class="photo-box">
+            <div class="loader">Loading</div>
+            <img
+              src="assets/1000196246.jpg"
+              onload="loaded(this)"
+              alt="Two people and a cat"
+            >
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================
+       SLIDE 18 — OTHER SONGS
+  ========================== -->
+
+  <section class="slide">
+    <div class="slide-inner">
+
+      <div class="kicker">Some songs stay connected to people</div>
+
+      <h2>And then there are these.</h2>
+
+      <div class="song-layout">
+
+        <div class="song-card">
+
+          <div style="font-size:42px">🎧</div>
+
+          <h2 style="font-size:24px;margin-top:8px">
+            A song that reminds me of you.
+          </h2>
+
+          <p style="font-size:15px">
+            You liked this one.
+            I still listen to it sometimes.
+            And somehow, certain parts always bring you back to mind.
+          </p>
+
+          <a
+            class="spotify"
+            href="https://open.spotify.com/track/7tbBhLL6Gs9nNCSFqnjlCL"
+            target="_blank"
+            rel="noopener"
+          >
+            ♫ Listen
+          </a>
+
+        </div>
+
+
+        <div class="song-card">
+
+          <div style="font-size:42px">🌸</div>
+
+          <h2 style="font-size:24px;margin-top:8px">
+            And this one too.
+          </h2>
+
+          <p style="font-size:15px">
+            Another song I associate with you.
+            Another little memory I kept.
+          </p>
+
+          <a
+            class="spotify"
+            href="https://open.spotify.com/track/3IHbILMXOuTMdMMPTcqZpc"
+            target="_blank"
+            rel="noopener"
+          >
+            ♫ Listen
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================
+       SLIDE 19 — LOVE
+  ========================== -->
+
+  <section class="slide">
+    <div class="slide-inner">
+
+      <div class="cat-big">🐱</div>
+
+      <div class="note pink">
+
+        <p style="font-size:23px">
+          I love you.
+        </p>
+
+        <p style="margin-top:14px">
+          I really want to spend my time with you.
+        </p>
+
+        <p style="margin-top:16px;font-size:15px;color:#866673">
+          That's just something I wanted to say honestly.
+          No pressure attached to it.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================
+       SLIDE 20 — BIRTHDAY
+  ========================== -->
+
+  <section class="slide">
+    <div class="slide-inner">
+
+      <div class="kicker">21 September 🌷</div>
+
+      <div class="note lavender">
+
+        <h2>Anyway… it's your birthday.</h2>
+
+        <p>
+          So today, I don't want to make this sad.
+        </p>
+
+        <p style="margin-top:14px">
+          I just want to wish you a really good year ahead.
+        </p>
+
+        <p style="margin-top:14px">
+          I hope you're happy.
+        </p>
+
+        <p style="margin-top:8px">
+          I hope you're doing well.
+        </p>
+
+        <p style="margin-top:8px">
+          I hope good things find you.
+        </p>
+
+        <p style="margin-top:14px">
+          That's all. 🌷
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================
+       SLIDE 21 — FINAL GIFT
+  ========================== -->
+
+  <section class="slide">
+    <div class="slide-inner">
+
+      <div class="gift" style="transform:scale(.75);margin-bottom:0">
+        <div class="gift-bow">🎀</div>
+        <div class="gift-lid"></div>
+        <div class="gift-box"></div>
+      </div>
+
+      <div class="note pink">
+
+        <h2 style="font-size:30px">
+          Happy Birthday, Nainwal Ji. 🎂
+        </h2>
+
+        <p>
+          I wish I could've given you a real gift today.
+          Maybe a whole bunch of them.
+        </p>
+
+        <p style="margin-top:14px">
+          But since I don't know your address,
+          this little thing had to do.
+        </p>
+
+        <p style="margin-top:14px">
+          So here's your tiny digital gift.
+        </p>
+
+        <p style="margin-top:14px">
+          I hope it made you smile.
+        </p>
+
+        <p style="margin-top:20px">
+          With love,<br>
+          <strong>Manshi</strong>
+        </p>
+
+        <p style="margin-top:10px">
+          21 September 🌸
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+</div>
+
+
+<!-- NAVIGATION -->
+
+<div class="progress" id="progress"></div>
+
+<button class="next-btn" id="nextBtn" onclick="nextSlide()">
+  Next ✦
+</button>
+
+<button class="music-mini" id="musicBtn" onclick="toggleMusic()">
+  ♫
+</button>
+
+
+<!-- BACKGROUND MUSIC -->
+<audio
+  id="bgMusic"
+  loop
+  preload="auto"
+>
+  <source src="assets/dial-tone-redial.mp3" type="audio/mpeg">
+</audio>
+
+
+<script>
+
+let current = 0;
+
+const slides = document.querySelectorAll(".slide");
+const nextBtn = document.getElementById("nextBtn");
+const progress = document.getElementById("progress");
+const music = document.getElementById("bgMusic");
+const musicBtn = document.getElementById("musicBtn");
+
+music.volume = 0.30;
+
+
+/* =========================
+   PROGRESS DOTS
+========================= */
+
+slides.forEach((_,i)=>{
+
+  const dot = document.createElement("span");
+
+  if(i === 0){
+    dot.classList.add("active");
+  }
+
+  progress.appendChild(dot);
+
+});
+
+
+function updateProgress(){
+
+  document.querySelectorAll(".progress span")
+    .forEach((dot,i)=>{
+
+      dot.classList.toggle(
+        "active",
+        i === current
+      );
+
+    });
+
+}
+
+
+/* =========================
+   SLIDE CHANGE
+========================= */
+
+function showSlide(index){
+
+  if(index < 0) index = 0;
+
+  if(index >= slides.length){
+    index = slides.length - 1;
+  }
+
+  slides[current].classList.remove("active");
+
+  current = index;
+
+  slides[current].classList.add("active");
+
+  updateProgress();
+
+  if(current === slides.length - 1){
+    nextBtn.textContent = "Start Again ↻";
+  }else{
+    nextBtn.textContent = "Next ✦";
+  }
+
+}
+
+
+function nextSlide(){
+
+  if(current === slides.length - 1){
+
+    showSlide(0);
+
+  }else{
+
+    showSlide(current + 1);
+
+  }
+
+}
+
+
+/* =========================
+   GIFT OPEN
+========================= */
+
+function openGift(){
+
+  const gift = document.getElementById("gift");
+
+  gift.classList.add("open");
+
+  startMusic();
+
+  setTimeout(()=>{
+    nextSlide();
+  },650);
+
+}
+
+
+/* =========================
+   MUSIC
+========================= */
+
+function startMusic(){
+
+  music.play()
+    .then(()=>{
+      musicBtn.textContent = "♫";
+    })
+    .catch(()=>{
+      // Browser may require another tap.
+    });
+
+}
+
+
+function toggleMusic(){
+
+  if(music.paused){
+
+    startMusic();
+
+  }else{
+
+    music.pause();
+
+    musicBtn.textContent = "♪";
+
+  }
+
+}
+
+
+/* =========================
+   FIRST USER INTERACTION
+   FOR MOBILE AUDIO
+========================= */
+
+document.addEventListener(
+  "touchstart",
+  ()=>{
+    if(music.paused && current > 0){
+      startMusic();
+    }
+  },
+  {once:true}
+);
+
+
+/* =========================
+   IMAGE LOADING
+========================= */
+
+function loaded(img){
+
+  const box = img.closest(".photo-box");
+
+  if(box){
+    box.classList.add("loaded");
+  }
+
+}
+
+
+/* =========================
+   KEYBOARD
+========================= */
+
+document.addEventListener("keydown",(e)=>{
+
+  if(e.key === "ArrowRight" || e.key === " "){
+    e.preventDefault();
+    nextSlide();
+  }
+
+  if(e.key === "ArrowLeft"){
+    showSlide(current - 1);
+  }
+
+});
+
+
+/* =========================
+   SWIPE ON PHONE
+========================= */
+
+let touchStartX = 0;
+let touchEndX = 0;
+
+document.addEventListener("touchstart",(e)=>{
+
+  touchStartX = e.changedTouches[0].screenX;
+
+},{passive:true});
+
+
+document.addEventListener("touchend",(e)=>{
+
+  touchEndX = e.changedTouches[0].screenX;
+
+  const distance = touchEndX - touchStartX;
+
+  if(Math.abs(distance) < 55) return;
+
+  if(distance < 0){
+
+    nextSlide();
+
+  }else{
+
+    showSlide(current - 1);
+
+  }
+
+},{passive:true});
+
+
+/* =========================
+   INITIAL STATE
+========================= */
+
+showSlide(0);
+
+</script>
+
+</body>
+</html>
